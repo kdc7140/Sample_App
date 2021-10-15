@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     //더하기
     fun sumNumber(){
-        var num1 = findViewById<EdWitText>(R.id.sumNum1)
+        var num1 = findViewById<EditText>(R.id.sumNum1)
         var num2 = findViewById<EditText>(R.id.sumNum2)
     }
 }
