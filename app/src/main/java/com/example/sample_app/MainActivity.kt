@@ -21,6 +21,12 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener{
             solution()
         }
+
+        var moveToCalc : Button = findViewById(R.id.btnCalc)
+        moveToCalc.setOnClickListener{
+            val calcIntent = Intent(this, Calculator::class.java)
+            startActivity(calcIntent)
+        }
     }
 
     /** Called when the user taps the Send button */
