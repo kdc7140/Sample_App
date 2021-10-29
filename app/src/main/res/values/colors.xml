@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="btnPink">#FF5675</color>
-    <color name="btnGrey">#f2f2f2 </color>
+    <color name="btnGrey">#dcdcdc </color>
+    <color name="btnClick">#D35A5A </color>
 
 </resources>
