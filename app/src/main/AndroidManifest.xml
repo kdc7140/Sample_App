@@ -9,11 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample_App">
-        <!--        android:theme="@style/Theme.AppCompat.Light">-->
+        <activity android:name=".LayoutSample"></activity>
+        <!-- android:theme="@style/Theme.AppCompat.Light"> -->
         <activity
             android:name=".Calculator"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".alertPopup" />
         <activity
             android:name=".DisplayMessageActivity"
