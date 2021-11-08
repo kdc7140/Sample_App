@@ -58,7 +58,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_weight="1"
                 android:background="@drawable/calc_btn_ripple"
-                android:text="("
+                android:text="%"
                 android:textColor="@color/black"
                 android:onClick="buttonClicked" />
 

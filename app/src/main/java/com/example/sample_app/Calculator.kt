@@ -36,6 +36,8 @@ class Calculator : AppCompatActivity() {
             R.id.btnX -> btnOperatorClicked("X")
             R.id.btnDiv -> btnOperatorClicked("/")
 
+            R.id.button11 -> btnPercent()
+
             R.id.btnEqual -> btnResult()
 
             R.id.button13 -> viewReset()
@@ -44,6 +46,12 @@ class Calculator : AppCompatActivity() {
 
     //숫자버튼
     private fun btnNumClick(num: String){
+        if(num == "0"){
+            if(resultView.text.toString() == ""){
+                return
+            }
+        }
+
         if(calcFlag == 0){
             resultView.append(num)
         }else {
@@ -86,13 +94,11 @@ class Calculator : AppCompatActivity() {
             resultView2.setText(resultView.text.toString() + symbol)
             resultView.setText("")
         }
+    }
 
-        if(symbol == "+"){
-
-        }
-
-
-
+    //% 버튼
+    private fun btnPercent(){
+        resultView.text.toString()
     }
 
     //초기화 버튼
