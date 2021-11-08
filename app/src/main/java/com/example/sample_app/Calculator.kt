@@ -98,7 +98,7 @@ class Calculator : AppCompatActivity() {
 
     //% 버튼
     private fun btnPercent(){
-        resultView.text.toString()
+        var rvText = resultView.text.toString()
     }
 
     //초기화 버튼
