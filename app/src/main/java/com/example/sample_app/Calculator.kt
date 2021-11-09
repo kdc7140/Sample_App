@@ -99,6 +99,15 @@ class Calculator : AppCompatActivity() {
     //% 버튼
     private fun btnPercent(){
         var rvText = resultView.text.toString()
+        var rvNum:Float = rvText.toFloat()
+        var rvRst = rvNum * 0.01
+
+        if(rvRst.toInt() >= 1){
+            resultView.setText(rvRst.toInt().toString())
+        }else{
+            resultView.setText(rvRst.toString())
+        }
+
     }
 
     //초기화 버튼
