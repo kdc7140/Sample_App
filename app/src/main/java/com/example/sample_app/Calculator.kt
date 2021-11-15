@@ -99,7 +99,7 @@ class Calculator : AppCompatActivity() {
     //% 버튼
     private fun btnPercent(){
         var rvText = resultView.text.toString()
-        var rvNum:Float = rvText.toFloat()
+        var rvNum:Double = rvText.toDouble()
         var rvRst = rvNum * 0.01
 
         if(rvRst.toInt() >= 1){
@@ -126,11 +126,19 @@ class Calculator : AppCompatActivity() {
             resultView2.append(resultView.text.toString() + "=")
         }else{
             var rv2Num = rv2Text.substring(0, rv2Text.length-1)
+            val opr = rv2Text.substring(rv2Text.length-1, rv2Text.length)
+
             calcNum = Integer.parseInt(rv2Num)
 
             var rv1Num = Integer.parseInt(resultView.text.toString())
+            var rstNum = 0
 
-            val rstNum = calcNum + rv1Num
+            when(opr) {
+                "+" -> rstNum = calcNum + rv1Num
+                "-" -> rstNum = calcNum - rv1Num
+                "X" -> rstNum = calcNum * rv1Num
+                "/" -> rstNum = calcNum / rv1Num
+            }
 
             resultView2.append(rv1Num.toString() + "=")
 
