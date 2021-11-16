@@ -22,6 +22,12 @@ class MainActivity : AppCompatActivity() {
             val calcIntent = Intent(this, Calculator::class.java)
             startActivity(calcIntent)
         }
+
+        var moveToAlgo : Button = findViewById(R.id.btnAlgo)
+        moveToAlgo.setOnClickListener{
+            val algoIntent = Intent(this, Algorithm::class.java)
+            startActivity(algoIntent)
+        }
     }
 
     /** Called when the user taps the Send button */
