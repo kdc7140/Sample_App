@@ -12,24 +12,33 @@ class Algorithm : AppCompatActivity() {
         setContentView(R.layout.activity_algorithm)
     }
 
-    fun greedyClick(view: View): Int {
+    fun greedyClick(view: View){
         val n : Int = 5
         var lost : Array<Int> = arrayOf(2,4)
         var reserve : Array<Int> = arrayOf(1,3,5)
 
         for(item in reserve){
-            if(lost.indexOf(item) != -1){
-                lost.slice(IntRange(lost.indexOf(item), lost.indexOf(item)+1))
-            }else if(lost.indexOf(item-1) != -1){
+            if(lost.indexOf(item-1) !=1){
+                Log.d("KDC test", (item-1).toString())
                 lost.slice(IntRange(lost.indexOf(item-1), lost.indexOf(item-1)+1))
-            }else if(lost.indexOf(item+1) != -1){
-                lost.slice(IntRange(lost.indexOf(item+1), lost.indexOf(item+1)+1))
+
             }
         }
+        Log.d("KDC test2", "success")
 
-        return n - lost.size
+//        for(item in reserve){
+//            if(lost.indexOf(item) != -1){
+//                lost.slice(IntRange(lost.indexOf(item), lost.indexOf(item)+1))
+//            }else if(lost.indexOf(item-1) != -1){
+//                lost.slice(IntRange(lost.indexOf(item-1), lost.indexOf(item-1)+1))
+//            }else if(lost.indexOf(item+1) != -1){
+//                lost.slice(IntRange(lost.indexOf(item+1), lost.indexOf(item+1)+1))
+//            }
+//        }
 
-        Log.d("KDC Array", Arrays.toString(lost))
-        Log.d("KDC Array", Arrays.toString(reserve))
+        //return n - lost.size
+
+        Log.d("KDC Array1", Arrays.toString(lost))
+        Log.d("KDC Array2", Arrays.toString(reserve))
     }
 }
