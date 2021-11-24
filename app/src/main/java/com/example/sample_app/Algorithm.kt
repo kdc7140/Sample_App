@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import java.util.*
 
 class Algorithm : AppCompatActivity() {
@@ -26,19 +27,18 @@ class Algorithm : AppCompatActivity() {
         }
         Log.d("KDC test2", "success")
 
-//        for(item in reserve){
-//            if(lost.indexOf(item) != -1){
-//                lost.slice(IntRange(lost.indexOf(item), lost.indexOf(item)+1))
-//            }else if(lost.indexOf(item-1) != -1){
-//                lost.slice(IntRange(lost.indexOf(item-1), lost.indexOf(item-1)+1))
-//            }else if(lost.indexOf(item+1) != -1){
-//                lost.slice(IntRange(lost.indexOf(item+1), lost.indexOf(item+1)+1))
-//            }
-//        }
+        var answer = n
+        var lostSet = lost.toSet() - reserve.toSet()
+        var reserveSet = (reserve.toSet() - lost.toSet()) as MutableSet
 
-        //return n - lost.size
+        for (item in lostSet) {
+            when {
+                item - 1 in reserveSet -> reserveSet.remove(item - 1)
+                item + 1 in reserveSet -> reserveSet.remove(item + 1)
+                else -> answer--
+            }
+        }
 
-        Log.d("KDC Array1", Arrays.toString(lost))
-        Log.d("KDC Array2", Arrays.toString(reserve))
+        //Toast.makeText(applicationContext ,"answer : " + answer.toString())
     }
 }
