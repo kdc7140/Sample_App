@@ -18,15 +18,6 @@ class Algorithm : AppCompatActivity() {
         var lost : Array<Int> = arrayOf(2,4)
         var reserve : Array<Int> = arrayOf(1,3,5)
 
-        for(item in reserve){
-            if(lost.indexOf(item-1) !=1){
-                Log.d("KDC test", (item-1).toString())
-                lost.slice(IntRange(lost.indexOf(item-1), lost.indexOf(item-1)+1))
-
-            }
-        }
-        Log.d("KDC test2", "success")
-
         var answer = n
         var lostSet = lost.toSet() - reserve.toSet()
         var reserveSet = (reserve.toSet() - lost.toSet()) as MutableSet
@@ -39,6 +30,28 @@ class Algorithm : AppCompatActivity() {
             }
         }
 
-        //Toast.makeText(applicationContext ,"answer : " + answer.toString())
+        Toast.makeText(this ,"answer : " + answer, Toast.LENGTH_SHORT).show()
+    }
+
+
+    fun collatzClick(view: View){
+        var num = 16
+        var answer: Int = 0
+        var count = num.toLong()
+
+        while(count != 1.toLong()){
+            count = if(count%2 == 0.toLong()){
+                count/2
+            }else{
+                count*3+1
+            }
+            answer++
+
+            if(answer == 500){
+                return Toast.makeText(this ,"answer : -" + 1, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        Toast.makeText(this ,"answer : " + answer, Toast.LENGTH_SHORT).show()
     }
 }
