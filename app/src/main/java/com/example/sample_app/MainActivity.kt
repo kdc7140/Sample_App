@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
             val algoIntent = Intent(this, Algorithm::class.java)
             startActivity(algoIntent)
         }
+
+        var movePage : Button = findViewById(R.id.btnPageMove)
+        movePage.setOnClickListener {
+            val pageMoveIntent = Intent(this, PageMove::class.java)
+            startActivity(pageMoveIntent)
+        }
     }
 
     /** Called when the user taps the Send button */
