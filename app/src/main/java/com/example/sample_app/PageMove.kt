@@ -13,10 +13,18 @@ class PageMove : AppCompatActivity() {
 
         var btnPageMove : Button = findViewById(R.id.btnPageMove)
         btnPageMove.setOnClickListener{
-            var param = findViewById<TextView>(R.id.textParam).text
-
+//            var param = findViewById<TextView>(R.id.textParam).text
+//
             val calcIntent = Intent(this, Calculator::class.java)
-            startActivity(calcIntent, movePage)
+            startActivityForResult(calcIntent, 200)
+
+//            @Override
+//            public void onClick(View v){
+//                Intent intent = new Intent(this, MenuActivity.class)
+//
+//                        //movePage -> 요청코드, 본인마음대로 써도 됨
+//                        startActivityForResult(intent, movePage)
+//            }
         }
     }
 
