@@ -16,12 +16,10 @@ class PageMove : AppCompatActivity() {
         btnPageMove.setOnClickListener{
 //            var param = findViewById<TextView>(R.id.textParam).text
 //
-            val calcIntent = Intent(this, Calculator::class.java)
-            startActivityForResult(calcIntent, 200)
 
             val editText = findViewById<EditText>(R.id.textParam)
             val message = editText.text.toString()
-            val intent = Intent(this, DisplayMessageActivity::class.java).apply {
+            val intent = Intent(this, PageMove2::class.java).apply {
                 putExtra(EXTRA_MESSAGE, message)
             }
             startActivityForResult(intent, 200)

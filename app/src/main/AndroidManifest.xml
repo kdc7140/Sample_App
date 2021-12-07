@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample_App">
-        <activity android:name=".PageMove2"></activity>
+        <activity
+            android:name=".PageMove2"
+            android:parentActivityName=".PageMove"></activity>
         <activity android:name=".PageMove" />
         <activity
             android:name=".Algorithm"
