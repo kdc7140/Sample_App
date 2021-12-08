@@ -16,7 +16,8 @@
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_margin="5dp"/>
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal" />
 
         <Button
             android:id="@+id/btnRev"
@@ -26,7 +27,7 @@
             android:layout_toRightOf="@+id/revView"
             android:layout_margin="5dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/sendView"
             android:layout_width="200dp"
             android:layout_height="50dp"
