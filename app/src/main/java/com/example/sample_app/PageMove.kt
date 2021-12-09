@@ -14,22 +14,18 @@ class PageMove : AppCompatActivity() {
         setContentView(R.layout.activity_page_move)
 
         var getResult = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result ->
-
             if (result.resultCode == Activity.RESULT_OK) {
                 val myData: Intent? = result.data
 //                val stringData = myData.getStringExtra("dataName")
                 //또는 이렇게
-                val stringData2 = result.data?.getStringExtra("param")
+                val rstData = result.data?.getStringExtra("param")
                 // 기타 등등 작업 수행
-                Toast.makeText(this ,"answer : " + stringData2, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this ,"result Data : " + rstData, Toast.LENGTH_SHORT).show()
             }
         }
 
         var btnPageMove : Button = findViewById(R.id.btnPageMove)
         btnPageMove.setOnClickListener{
-//            var param = findViewById<TextView>(R.id.textParam).text
-//
-
             val editText = findViewById<EditText>(R.id.textParam)
             val message = editText.text.toString()
             val intent = Intent(this, PageMove2::class.java).apply {
@@ -38,14 +34,6 @@ class PageMove : AppCompatActivity() {
             getResult.launch(intent)
 //            startActivity(intent)
 
-//            val intent = Intent(this, PageMove2::class.java)
-//            getResult.launch(intent)
         }
-
-
-
     }
-
-
-
 }
