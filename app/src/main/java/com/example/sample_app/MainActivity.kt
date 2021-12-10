@@ -34,6 +34,12 @@ class MainActivity : AppCompatActivity() {
             val pageMoveIntent = Intent(this, PageMove::class.java)
             startActivity(pageMoveIntent)
         }
+
+        var moveGesture : Button = findViewById(R.id.btnGesture)
+        moveGesture.setOnClickListener {
+            var moveGestureIntent = Intent(this, GestureEvent::class.java)
+            startActivity(moveGestureIntent)
+        }
     }
 
     /** Called when the user taps the Send button */

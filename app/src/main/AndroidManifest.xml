@@ -10,8 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sample_App">
         <activity
+            android:name=".GestureEvent"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
             android:name=".PageMove2"
-            android:parentActivityName=".PageMove"></activity>
+            android:parentActivityName=".PageMove" />
         <activity android:name=".PageMove" />
         <activity
             android:name=".Algorithm"
