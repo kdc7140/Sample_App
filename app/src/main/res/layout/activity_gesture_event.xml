@@ -22,7 +22,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
                 android:text="onDown"
                 android:textAllCaps="false"/>
@@ -30,17 +30,19 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onShowPress" />
+                android:text="onShowPress"
+                android:textAllCaps="false" />
 
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onSingleTapUp" />
+                android:text="onSingleTapUp"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 
@@ -53,16 +55,18 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onSingleTapConfirmed" />
+                android:text="onLongPress"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onDoubleTapEvent" />
+                android:text="onDoubleTapEvent"
+                android:textAllCaps="false" />
 
         </LinearLayout>
 
@@ -75,23 +79,42 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onDoubleTap" />
+                android:text="onDoubleTap"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onScroll" />
+                android:text="onScroll"
+                android:textAllCaps="false" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:layout_margin="5dp"
+                android:layout_margin="2dp"
                 android:layout_weight="1"
-                android:text="onFling" />
+                android:text="onFling"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:text="onSingleTapConfirmed"
+                android:textAllCaps="false" />
+
 
         </LinearLayout>
 
