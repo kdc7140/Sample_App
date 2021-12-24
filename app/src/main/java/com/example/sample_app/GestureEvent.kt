@@ -2,6 +2,7 @@ package com.example.sample_app
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 
@@ -15,31 +16,50 @@ class GestureEvent : AppCompatActivity() {
     }
 }
 
-
-class GestrueSample2 : GestureDetector.OnGestureListener{
-    // 제스처 이벤트를 받아서 text를 변경
-    override fun onShowPress(e: MotionEvent?) {
-        text2.text = "안녕"
-        text3.text = "반갑습니다."
-        Log.d("test1","onShowPress")
-        Log.d("test1",e.toString())
+class gestureEvent : GestureDetector.OnGestureListener{
+    override fun onDown(e: MotionEvent?): Boolean {
+        TODO("Not yet implemented")
     }
 
-}
-
-class gsSample : GestureDetector.OnGestureListener{
     override fun onShowPress(e: MotionEvent?) {
         TODO("Not yet implemented")
-        text2.text = "gd"
     }
+
+    override fun onSingleTapUp(e: MotionEvent?): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun onScroll(
+        e1: MotionEvent?,
+        e2: MotionEvent?,
+        distanceX: Float,
+        distanceY: Float
+    ): Boolean {
+        TODO("Not yet implemented")
+    }
+
+    override fun onLongPress(e: MotionEvent?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onFling(
+        e1: MotionEvent?,
+        e2: MotionEvent?,
+        velocityX: Float,
+        velocityY: Float
+    ): Boolean {
+        TODO("Not yet implemented")
+    }
+
+
 }
+
+
 
 class MyGesture2 : GestureDetector.OnGestureListener {
 
     // 제스처 이벤트를 받아서 text를 변경
     override fun onShowPress(e: MotionEvent?) {
-        text2.text = "안녕"
-        text3.text = "반갑습니다."
         Log.d("test1","onShowPress")
         Log.d("test1",e.toString())
     }
