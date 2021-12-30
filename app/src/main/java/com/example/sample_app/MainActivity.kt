@@ -37,9 +37,10 @@ class MainActivity : AppCompatActivity() {
 
         var moveGesture : Button = findViewById(R.id.btnGesture)
         moveGesture.setOnClickListener {
-            var moveGestureIntent = Intent(this, GestureEvent::class.java)
-            startActivity(moveGestureIntent)
+            val pageMoveIntent = Intent(this, KotlinEvent::class.java)
+            startActivity(pageMoveIntent)
         }
+
     }
 
     /** Called when the user taps the Send button */
