@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import kotlinx.android.synthetic.main.activity_kotlin_event.*
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_kotlin_event.*
 
 class KotlinEvent : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
